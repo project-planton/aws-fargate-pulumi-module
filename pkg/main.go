@@ -1,13 +1,13 @@
 package pkg
 
 import (
+	awsfargatev1 "buf.build/gen/go/plantoncloud/project-planton/protocolbuffers/go/project/planton/apis/provider/aws/awsfargate/v1"
 	"github.com/pkg/errors"
-	"github.com/plantoncloud/project-planton/apis/zzgo/cloud/planton/apis/code2cloud/v1/aws/awsfargate"
 	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-func Resources(ctx *pulumi.Context, stackInput *awsfargate.AwsFargateStackInput) error {
+func Resources(ctx *pulumi.Context, stackInput *awsfargatev1.AwsFargateStackInput) error {
 	awsCredential := stackInput.AwsCredential
 
 	//create aws provider using the credentials from the input
